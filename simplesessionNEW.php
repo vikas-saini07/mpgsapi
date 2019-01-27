@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => "{\n\"lineOfBusiness\": \"test_socks\"\n}",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
-    'Authorization: Basic '. base64_encode("$username:$password"),
+    'Authorization: Basic '.base64_encode("$username:$password"),
     "cache-control: no-cache",
 ));
 
