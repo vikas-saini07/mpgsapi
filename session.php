@@ -56,5 +56,6 @@ Payload:
         }
     }
 }</code></pre>
+        "<?php echo $response; ?>"
     </body>
 </html>
