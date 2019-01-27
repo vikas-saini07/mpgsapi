@@ -13,7 +13,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n\"lineOfBusiness\": \"test_socks\"\n}",
+  CURLOPT_POSTFIELDS => "{\n    \"lineOfBusiness\": \"test_socks\"\n}",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
     'Authorization: Basic '.base64_encode("$username:$password"),
