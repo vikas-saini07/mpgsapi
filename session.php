@@ -37,7 +37,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n    \"lineOfBusiness\":\"test_socks\"\n}",
+  CURLOPT_POSTFIELDS =>"{\n\"lineOfBusiness\": \"test_socks\"\n}",,
   CURLOPT_HTTPHEADER => array(
     "Authorization: Basic bWVyY2hhbnQuVEVTVE9QVElDQUw6ZTM3YTg2YzMxMDk4ZWM0YzQ4OTc3YWMxYTNlMzhmNzA=",
     "Postman-Token: aad070c0-44cf-469f-81e7-0cd8f554b804",
