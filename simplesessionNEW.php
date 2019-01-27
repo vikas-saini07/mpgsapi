@@ -5,8 +5,6 @@ $APIusername = 'merchant.TESTVICTESNB237';
 $APIpassword = 'ed17a6e2ed43172c0f7bde912cbe54de';
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://gateway.test.nab.com.au/api/rest/version/46/merchant/TESTVICTESNB237/session",
-  CURLOPT_SSL_VERIFYPEER => false,
-  CURLOPT_SSL_VERIFYHOST => false,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 100,
