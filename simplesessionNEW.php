@@ -1,8 +1,8 @@
 <?php
  
 $curl = curl_init();
-$username = urlencode(‘merchant.TESTVICTESNB237’);
-$password = urlencode(‘ed17a6e2ed43172c0f7bde912cbe54de’);
+$username = ‘merchant.TESTVICTESNB237’;
+$password = ‘ed17a6e2ed43172c0f7bde912cbe54de’;
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://gateway.test.nab.com.au/api/rest/version/46/merchant/TESTVICTESNB237/session",
   CURLOPT_RETURNTRANSFER => true,
