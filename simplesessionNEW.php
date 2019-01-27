@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 400,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "$postdata",
+  //CURLOPT_POSTFIELDS => "$postdata",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
     'Authorization: Basic ' . base64_encode("merchant.$merchantId:$password")
