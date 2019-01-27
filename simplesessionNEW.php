@@ -1,8 +1,6 @@
 <?php
  
 $curl = curl_init();
-$APIusername = 'merchant.TESTVICTESNB237';
-$APIpassword = 'ed17a6e2ed43172c0f7bde912cbe54de';
 $newdata = array("lineOfBusiness" => "test_socks");
 $postdata = json_encode($newdata);
 curl_setopt_array($curl, array(
@@ -16,7 +14,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => "$postdata",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
-    'Authorization: Basic ' . base64_encode("$APIusername:$APIpassword")
+    'Authorization: Basic ' . base64_encode("merchant.$merchantId:$password")
 ));
 
 $response = curl_exec($curl);
