@@ -3,6 +3,8 @@
 $curl = curl_init();
 $APIusername = 'merchant.TESTVICTESNB237';
 $APIpassword = 'ed17a6e2ed43172c0f7bde912cbe54de';
+$newdata = array("lineOfBusiness" => "test_socks");
+$postdata = json_encode($newdata);
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://gateway.test.nab.com.au/api/rest/version/46/merchant/TESTVICTESNB237/session",
   CURLOPT_RETURNTRANSFER => true,
@@ -11,7 +13,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 400,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n    \"lineOfBusiness\": \"test_socks\"\n}",
+  CURLOPT_POSTFIELDS => "$postdata",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
     'Authorization: Basic ' . base64_encode("$APIusername:$APIpassword")
