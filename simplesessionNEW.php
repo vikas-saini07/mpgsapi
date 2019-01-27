@@ -1,8 +1,8 @@
 <?php
  
 $curl = curl_init();
-$username = ‘merchant.TESTVICTESNB237’;
-$password = ‘ed17a6e2ed43172c0f7bde912cbe54de’;
+$APIusername = ‘merchant.TESTVICTESNB237’;
+$APIpassword = ‘ed17a6e2ed43172c0f7bde912cbe54de’;
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://gateway.test.nab.com.au/api/rest/version/46/merchant/TESTVICTESNB237/session",
   CURLOPT_SSL_VERIFYPEER => false,
@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => "{\n    \"lineOfBusiness\": \"test_socks\"\n}",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
-    'Authorization: Basic ' . base64_encode("merchant.$merchantId:$password")
+    'Authorization: Basic ' . base64_encode("$APIusername:$APIpassword")
 ));
 
 $response = curl_exec($curl);
