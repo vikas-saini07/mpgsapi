@@ -22,9 +22,9 @@ inclide 'checkout__BAIDURI_N_950028548_mastercard.php';
 <html>
 <body>
 
-<p>Click the button to display the path name of the current URL.</p>
+<p>Display the path name of the current URL.</p>
 
-<button onclick="myFunction()">Try it</button>
+<!--<button onclick="myFunction()">Try it</button>-->
 
 <p id="demo"></p>
 
@@ -32,10 +32,10 @@ inclide 'checkout__BAIDURI_N_950028548_mastercard.php';
 </div>
 
 <script>
-function myFunction() {
+/*function myFunction() {
   var x =   window.location.pathname;
   document.getElementById("demo").innerHTML = x;
-}
+}*/
 var src_str = window.location.pathname;
 var str_spl = src_str.split("/");
 var num;
