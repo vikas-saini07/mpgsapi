@@ -39,7 +39,7 @@ function myFunction() {
 var src_str = "Sentence 1. Sentence 2. Sentence 3";
 var str_spl = src_str.split(".");
 var num;
-var display_split_strings = '<p>After executing the split method: <span> src_str.split(".");</span></p>';
+var display_split_strings = window.location.pathname;
 for (num=0; num < str_spl.length; num++){
     display_split_strings += str_spl[num] + "<BR>";
     }
