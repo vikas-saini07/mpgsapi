@@ -25,7 +25,7 @@ include '_bootstrap.php';
 <script src="https://baiduri-bpgs.mtf.gateway.mastercard.com/checkout/version/46/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
-<!--data-complete="completeCallback" -->
+data-complete="completeCallback"
 <!--data-timeout="timeoutCallback"-->
 data-beforeRedirect="Checkout.saveFormFields" 
 data-afterRedirect="Checkout.restoreFormFields"> 
@@ -48,17 +48,17 @@ var n = x.toString();
 function errorCallback(error) { 
 console.log("Error: " + JSON.stringify(error)); 
 }
- function timeoutCallback() {
+ /*function timeoutCallback() {
                 //handle payment timeout
 				console.log("Calling timeout."); 
-            };
+            };*/
 function cancelCallback() { 
 console.log('Payment cancelled'); 
 confirm('Are you sure you want to cancel?'); 
 } 
 // or if you want to provide a URL: 
 cancelCallback = "http://www.bbc.com/"; 
-/*function completeCallback(response) {
+function completeCallback(response) {
         // Save the resultIndicator
 		console.log("Calling completecallback"); 
         resultIndicator = response;
@@ -66,7 +66,7 @@ cancelCallback = "http://www.bbc.com/";
 		console.log(result); 
         //location.href = "https://www.google.com";
 		window.location.href = "https://www.google.com" + "/" + orderId + "/" + result;
-    }*/
+    }
 var text = Checkout.configure({ 
 merchant:'TEST950029025',
 //lineOfBusiness:'test_socks',
