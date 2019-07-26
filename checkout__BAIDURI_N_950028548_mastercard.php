@@ -74,7 +74,7 @@ cancelCallback = "http://www.bbc.com/";
         // Compare with the resultIndicator saved in the completeCallback() method
         if (resultIndicator) {
             var result = (resultIndicator === data.successIndicator) ? "SUCCESS" : "ERROR";
-            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php" + data.orderId + "/" + result;
+            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + result;
         }
         else {
             successIndicator = data.successIndicator;
@@ -83,7 +83,7 @@ cancelCallback = "http://www.bbc.com/";
             sessionVersion = data.sessionVersion;
             merchantId = data.merchantId;
 
-            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
+            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
         }
 
 //        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
@@ -97,7 +97,7 @@ function completeCallback(response) {
         var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
 		console.log(result); 
         //location.href = "https://www.google.com";
-		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php" + orderId + "/" + sessionId + "/" + result;
+		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
 merchant:'TEST950029025',
