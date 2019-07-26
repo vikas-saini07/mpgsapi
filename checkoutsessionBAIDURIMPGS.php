@@ -1,28 +1,29 @@
 <?php
  
 $curl = curl_init();
- 
+
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://test-gateway.mastercard.com/api/nvp/version/41",
-  CURLOPT_SSL_VERIFYPEER => false,
-  CURLOPT_SSL_VERIFYHOST => false,
+  CURLOPT_URL => "https://baiduri-bpgs.mtf.gateway.mastercard.com/api/nvp/version/46",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
+  CURLOPT_MAXREDIRS => 100,
+  CURLOPT_TIMEOUT => 300,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=TESTVICTOR01&apiUsername=merchant.TESTVICTOR01&apiPassword=cef2d7619cf1535c6b5320ee277a88ed&order.currency=AUD&order.id=546098PHTP45&order.amount=55&interaction.returnUrl=https%3A%2F%2Ftigris-eden.com%2Fthanks",
+  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=TEST950029025&apiUsername=merchant.TEST950029025&apiPassword=5aa689a4ff28a8d62e12a20e77133134&order.currency=BND&order.id=546098PRrf467W&order.amount=45",
   CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json',
-    'Authorization: Basic ' . base64_encode("merchant.TESTVICTOR01:cef2d7619cf1535c6b5320ee277a88ed")
+    "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
+    "Content-Type: application/x-www-form-urlencoded",
+    "Postman-Token: 0fc6857b-c5c6-44b6-a1d3-d6c987c73399",
+    "cache-control: no-cache"
+  ),
 ));
- 
+
 $response = curl_exec($curl);
 $err = curl_error($curl);
- 
+
 curl_close($curl);
- 
+
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
