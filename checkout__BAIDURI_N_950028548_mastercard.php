@@ -39,10 +39,10 @@ var n = x.toString();
 </script> 
 
 <script type="text/javascript"> 
-    var sessionId = "SESSION0002087600568H95736267K0";
-    var sessionVersion = "5d47ceff01";
-    var successIndicator = "03282fb142c9483e";
-    var orderId = "546091988HW";
+    var sessionId = "SESSION0002856081514I41541147I1";
+    var sessionVersion = "3437457801";
+    var successIndicator = "a35793f7dc5c4910";
+    var orderId = "546091988HMK";
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
@@ -74,7 +74,7 @@ cancelCallback = "http://www.bbc.com/";
         // Compare with the resultIndicator saved in the completeCallback() method
         if (resultIndicator) {
             var result = (resultIndicator === data.successIndicator) ? "SUCCESS" : "ERROR";
-            window.location.href = "https://victor-test-app123.herokuapp.com" + data.orderId + "/" + result;
+            window.location.href = "https://victor-test-app123.herokuapp.com/" + data.orderId + "/" + result;
         }
         else {
             successIndicator = data.successIndicator;
@@ -83,7 +83,7 @@ cancelCallback = "http://www.bbc.com/";
             sessionVersion = data.sessionVersion;
             merchantId = data.merchantId;
 
-            window.location.href = "https://victor-test-app123.herokuapp.com" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
+            window.location.href = "https://victor-test-app123.herokuapp.com/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
         }
 
 //        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
@@ -97,7 +97,7 @@ function completeCallback(response) {
         var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
 		console.log(result); 
         //location.href = "https://www.google.com";
-		window.location.href = "https://victor-test-app123.herokuapp.com" + orderId + "/" + result;
+		window.location.href = "https://victor-test-app123.herokuapp.com/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
 merchant:'TEST950029025',
