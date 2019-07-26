@@ -1,7 +1,6 @@
 <?php
- 
+include '_bootstrap.php';
 $curl = curl_init();
-
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://baiduri-bpgs.mtf.gateway.mastercard.com/api/nvp/version/46",
   CURLOPT_RETURNTRANSFER => true,
