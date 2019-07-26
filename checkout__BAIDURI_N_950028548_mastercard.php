@@ -39,9 +39,9 @@ var n = x.toString();
 </script> 
 
 <script type="text/javascript"> 
-    var sessionId = "SESSION0002904417678I15919705K4";
-    var sessionVersion = "920dccdc01";
-    var successIndicator = "3e2d68b8100f4a70";
+    var sessionId = "SESSION0002453765076F03368012E1";
+    var sessionVersion = "3d1a67a601";
+    var successIndicator = "2306d4d1c8924a40";
 	
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
@@ -58,6 +58,38 @@ confirm('Are you sure you want to cancel?');
 } 
 // or if you want to provide a URL: 
 cancelCallback = "http://www.bbc.com/"; 
+    function beforeRedirect() {
+        return {
+            successIndicator: successIndicator,
+            orderId: orderId,
+            sessionId: sessionId,
+            sessionVersion: sessionVersion,
+            merchantId: merchantId
+        };
+    }
+
+    // This method is specifically for the full payment page option. Because we leave this page and return to it, we need to preserve the
+    // state of successIndicator and orderId using the beforeRedirect/afterRedirect option
+    function afterRedirect(data) {
+        // Compare with the resultIndicator saved in the completeCallback() method
+        if (resultIndicator) {
+            var result = (resultIndicator === data.successIndicator) ? "SUCCESS" : "ERROR";
+            window.location.href = "https://victor-test-app123.herokuapp.com" + data.orderId + "/" + result;
+        }
+        else {
+            successIndicator = data.successIndicator;
+            orderId = data.orderId;
+            sessionId = data.sessionId;
+            sessionVersion = data.sessionVersion;
+            merchantId = data.merchantId;
+
+            window.location.href = "https://victor-test-app123.herokuapp.com" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
+        }
+
+//        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
+//        window.location.href = "/hostedCheckout/" + data.orderId + "/" + result;
+    }	
+	
 function completeCallback(response) {
         // Save the resultIndicator
 		console.log("Calling completecallback"); 
@@ -65,7 +97,7 @@ function completeCallback(response) {
         var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
 		console.log(result); 
         //location.href = "https://www.google.com";
-		window.location.href = "https://www.google.com";// "/" + orderId + "/" + result;
+		window.location.href = "https://victor-test-app123.herokuapp.com" + orderId + "/" + result;
     }
 var text = Checkout.configure({ 
 merchant:'TEST950029025',
