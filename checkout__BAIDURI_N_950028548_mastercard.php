@@ -39,9 +39,9 @@ var n = x.toString();
 </script> 
 
 <script type="text/javascript"> 
-    var sessionId = "SESSION0002557284608F05377788J9";
-    var sessionVersion = "2aebbfbb01";
-    var successIndicator = "797645149d544575";
+    var sessionId = "SESSION0002596199461G29159386F3";
+    var sessionVersion = "262cca5e01";
+    var successIndicator = "dcd4252c06da48df";
 	
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
@@ -65,7 +65,7 @@ function completeCallback(response) {
         var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
 		console.log(result); 
         //location.href = "https://www.google.com";
-		window.location.href = "https://www.google.com" + "/" + orderId + "/" + result;
+		window.location.href = "https://www.google.com";// "/" + orderId + "/" + result;
     }
 var text = Checkout.configure({ 
 merchant:'TEST950029025',
