@@ -4,7 +4,7 @@ $curl = curl_init();
 $username = "merchant.VICTOR01";
 $password = "1b8e9f6f7bf4c68b71f11e3eb5ce8cbb";
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://test-gateway.mastercard.com/api/rest/version/52/merchant/VICTOR01/3DSecureId/2004123585B",
+  CURLOPT_URL => "https://test-gateway.mastercard.com/api/rest/version/52/merchant/VICTOR01/3DSecureId/2004123585D",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
