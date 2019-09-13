@@ -35,6 +35,7 @@ include '_bootstrap.php';
             <li><a href="./session.php">Session API</a></li>
             <li><a href="./transaction.php">Transaction API</a></li>
             <li><a href="./3DSecure.php">3DSecure API</a></li>
+            <li><a href="./3dsRedirect.php">responseUrl</a></li>
             <li><a href="./simplesessionNEW.php">Create Session</a></li>
             <li><a href="./checkoutsessionBAIDURIMPGS.php">Create Checkout Session</a></li>
             <li><a href="./checkout__BAIDURI_N_950028548_mastercard.php">Pass Checkout Session with Hosted Checkout</a></li>
