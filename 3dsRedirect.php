@@ -30,7 +30,7 @@ include '_bootstrap.php';
 
  <!-- Populate the mandatory TermUrl value with the URL to which you want the payer returned when the authentication process has completed. This should be the same value as supplied in the 3DSecure.authenticationRedirect.responseUrl  parameter to the CHECK_ENROLLMENT request. -->
 
- <input type="hidden" name="TermUrl" value="https://merchant.com/3ds/return"/>
+ <input type="hidden" name="TermUrl" value="https://victor-test-app123.herokuapp.com/3dsRedirect.php"/>
 
  <!-- The ACS will echo the contents of the mandatory MD parameter when the payer is returned to the URL specified in the TermUrl parameter.  You can use this parameter to establish a link between the ACS request and response. -->
 
