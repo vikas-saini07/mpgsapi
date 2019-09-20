@@ -4,11 +4,11 @@
 <body> 
 <!-- Populate the form action attribute with the value returned in the 3DSecure.authenticationRedirect.customized.acsUrl response parameter -->
 
- <form name="3dsRedirect" action="https://mtf.gateway.mastercard.com/acs/MastercardACS/42ebc2a2-0ec5-4524-8d73-f526835143d5" method="POST" accept-charset="UTF-8">
+ <form name="3dsRedirect" action="https://mtf.gateway.mastercard.com/acs/MastercardACS/7e6b92f6-0538-4d5f-b760-286f94c8dc4e" method="POST" accept-charset="UTF-8">
 
  <!-- Populate the mandatory PaReq parameter with the value returned in the 3DSecure.authenticationRedirect.customized.paReq response parameter.  -->
 
- <input type="text" name="PaReq" value="[3DSecure.authenticationRedirect.customized.paReq]"/>
+ <input type="text" name="PaReq" value="eAFVUsluwjAQvSPxD1YOvRUvECB0MGKrSiUQpVSterMSi6QlC45TQo/9mn5Xv6R2gC4+WH4znuc3bwyDMt6iN6nyKE36Dm0QB8nET4Mo2fSdh/X1ZdcZ8HoN1qGScnIv/UJJDnOZ52IjURSYGmIXbbOO57oOh+VwJXccTpzcUDYY4DM0pcoPRaI5CH83mi24yxhhTcAnCLFUswn3PEJJp9sBfMSQiFjylXhPFVqKAxoWOkQXIs6u0Fhk2qgCXF0BPy0SrQ686bYBnwEUasv3+31DWYZMHLTMdcNPY8A2A/hX1rKwAnPTZRkFfB9M3dH8WY9fp4VXtl/u9O148xiOnhbzPmB7AwKhJWeEesRjBBHWa7EeaQGu4iBiq4fPFiv09fGJqPGDmGaPUcjsY8MjoMZJwH8jYNxWZhznZs4IZJmliTS0xtmfM+Bf6eMb66+vjZMuZc2WWw3Jbl3rdJWwLJExilFKKxoLANtSfBqisaUatIn8+wD12jdYc7i1"/>
 
  <!-- Populate the mandatory TermUrl value with the URL to which you want the payer returned when the authentication process has completed. This should be the same value as supplied in the 3DSecure.authenticationRedirect.responseUrl  parameter to the CHECK_ENROLLMENT request. -->
 
