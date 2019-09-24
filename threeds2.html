@@ -1,0 +1,105 @@
+	<!DOCTYPE html>
+	<html>
+    	<head>
+        <script src="https://mtf.gateway.mastercard.com/static/threeDS/1.2.0/three-ds.min.js"
+                data-error="errorCallback"
+                data-cancel="cancelCallback">
+        </script>
+
+        <script type="text/javascript">
+		       /**
+		        Simple initialization call with just mandatory fields.
+		        */
+		        
+				function configure3DS () {
+				console.log('configure clicked');
+				var sessionId = document.getElementById('sessionid').value;
+				var merchantId = document.getElementById('merchantid').value;
+				ThreeDS.configure({
+				merchantId: merchantId,
+				sessionId: sessionId,
+				containerId: "3DSUI",
+				configuration: {userLanguage: "en-US", wsVersion: 53},
+				callback: function(data) {
+						if(ThreeDS.isConfigured()) {
+							console.log("EMV3DS configured.");
+							document.getElementById('log').innerHTML="EMV3DS Configured";
+						}
+						else {
+							alert("EMV3DS did not successfully configured.");
+						}
+					}
+			});
+				
+				
+				
+				}
+				
+				
+				function initiate3DS () {
+				console.log('Initiate Clicked');
+				var orderId = document.getElementById('orderid').value;
+				var transactionId = document.getElementById('transactionId').value;
+				
+				ThreeDS.initiateAuthentication(orderId, transactionId, function (data) {
+					document.getElementById('log').innerHTML= json.stringify(data, null, 2);
+					if (data && data.error) {
+						var error = data.error;
+						//Something bad happened, the error value will match what is returned by the Authentication API
+						console.error("error.code : ", error.code);
+						console.error("error.msg : ", error.msg);
+						console.error("error.result : ", error.result);
+						console.error("error.status : ", error.status);
+					}
+					else {
+						console.log("After Initiate 3DS ", data);
+				 
+						//data.response will contain information like gatewayRecommendation, authentication version, etc.
+						console.log("REST API raw response ", data.restApiResponse);
+						console.log("Correlation Id", data.correlationId);
+						console.log("Gateway Recommendation", data.gatewayRecommendation);
+						console.log("HTML Redirect Code", data.htmlRedirectCode);
+						console.log("Authentication Version", data.authenticationVersion);
+						 
+						switch (data.gatewayRecommendation) {
+							case "PROCEED_WITH_AUTHENTICATION":
+								authenticatePayer();//merchant's method
+								break;
+							case "PROCEED_WITH_PAYMENT":
+								pay();//merchant's method, you can proceed with the payment, for example the payer might not be enrolled for 3DS1 or 3DS2.
+								break;
+							case "DO_NOT_PROCEED":
+								displayReceipt(data);//merchant's method, you can offer the payer the option to try another payment method.
+								break;
+						}
+					}
+    });
+				
+				}
+				
+				
+
+	</script>
+	</head>
+	<body>
+		
+		<table border=0>
+		<tr><td>
+		Merchant ID: <input type='text' id='merchantid' /> <br />
+		Session ID: <input type='text' id='sessionid' /> <br />
+		<button  id='configure' onclick="configure3DS();">Configure</button> <br />
+		<br />
+		Order ID: <input type='text' id='orderid' /><br />
+		Transaction ID: <input type='text' id='transactionId' /><br />
+		<button  id='initiate' onclick="initiate3DS();">Initiate 3DS</button> <br />
+		
+		<div id="3DSUI" hidden="true"></div>
+		
+		</td>
+		<td>
+		<pre class="apiresponse"><code id="log" json=""></code></pre>
+		</td>
+		</tr>
+		</table>
+		</body>
+	</html>
