@@ -18,9 +18,9 @@ include '_bootstrap.php';
 ?>
 <!DOTYPE html>
 <html> 
-<!--"https://paymentgateway.commbank.com.au/checkout/version/40/checkout.js"--> 
+<!--"https://test-gateway.mastercar.com/checkout/version/53/checkout.js"--> 
 <head> 
-<script src="https://baiduri-bpgs.mtf.gateway.mastercard.com/checkout/version/46/checkout.js" 
+<script src="https://test-gateway.mastercar.com/checkout/version/53/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
@@ -104,7 +104,7 @@ amount: function() {
 //Dynamic calculation of amount 
 return 80 + 25; 
 }, 
-currency: 'BND', 
+currency: 'AUD', 
 description: 'Ordered goods', 
 id: JSON.stringify(n) 
 }, 
@@ -131,7 +131,7 @@ obj.Checkout.configure.order.id;
 </head> 
 <body> 
 ... Master card: 5123450000000008<br>
-More test cards: <a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
+More test cards: <a href="https://test-gateway.mastercar.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
 China Union Pay: 
 <a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
 <input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
