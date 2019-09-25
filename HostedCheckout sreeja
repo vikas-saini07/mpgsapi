@@ -18,9 +18,9 @@ include '_bootstrap.php';
 ?>
 <!DOTYPE html>
 <html> 
-<!--"https://test-gateway.mastercar.com/checkout/version/53/checkout.js"--> 
+<!--"https://test-gateway.mastercard.com/checkout/version/53/checkout.js"--> 
 <head> 
-<script src="https://test-gateway.mastercar.com/checkout/version/53/checkout.js" 
+<script src="https://test-gateway.mastercard.com/checkout/version/53/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
@@ -40,7 +40,7 @@ var n = x.toString();
     var sessionId = "SESSION0002579089072M5309534E14";
     var sessionVersion = "3afb74ba01";
     var successIndicator = "837232e5b74845fd";
-    var orderId = "546X919ZX";
+    var orderId = "xyz1";
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
