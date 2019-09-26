@@ -36,6 +36,7 @@ include '_bootstrap.php';
             <li><a href="./transaction.php">Transaction API</a></li>
             <li><a href="./3DSecure.php">3DSecure API</a></li>
             <li><a href="./HostedCheckout sreeja.php">HostedCheckout sreeja</a></li>
+            <li><a href="./CreateSession sreeja.php">CreateSession sreeja</a></li>
             <li><a href="./Check3DSEnrollment.php">Check for 3DS Enrollment</a></li>
             <li><a href="./3dsRedirect.html">responseUrl</a></li>
             <li><a href="./simplesessionNEW.php">Create Session</a></li>
