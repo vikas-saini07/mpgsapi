@@ -2,7 +2,7 @@
 include '_bootstrap.php';
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://test-gateway.mastercard.com/api/nvp/version/53",
+  CURLOPT_URL => "https://test-gateway.mastercard.com/api/nvp/version/47",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 100,
