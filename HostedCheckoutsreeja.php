@@ -95,7 +95,7 @@ function completeCallback(response) {
 		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
-merchant:'TEST950029025',
+merchant:'TESTSREEJATEST',
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
