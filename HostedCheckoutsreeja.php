@@ -37,10 +37,10 @@ var n = x.toString();
 </script> 
 
 <script type="text/javascript"> 
-    var sessionId = "SESSION0002579089072M5309534E14";
-    var sessionVersion = "3afb74ba01";
-    var successIndicator = "837232e5b74845fd";
-    var orderId = "xyz1";
+    var sessionId = "SESSION0002759238078E97833401L7";
+    var sessionVersion = "a13e7a0901";
+    var successIndicator = "ad89d84ea5434900";
+    var orderId = "ABC123";
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
