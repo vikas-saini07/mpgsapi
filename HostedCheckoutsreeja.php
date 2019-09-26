@@ -18,9 +18,9 @@ include '_bootstrap.php';
 ?>
 <!DOTYPE html>
 <html> 
-<!--"https://test-gateway.mastercard.com/checkout/version/53/checkout.js"--> 
+<!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
-<script src="https://test-gateway.mastercard.com/checkout/version/53/checkout.js" 
+<script src="https://test-gateway.mastercard.com/checkout/version/47/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
