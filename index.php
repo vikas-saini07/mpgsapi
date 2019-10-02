@@ -46,7 +46,7 @@ include '_bootstrap.php';
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
             <li><a href="./SimplifyPaymentForm.php">Simplify Payment Form</a></li>
             <li><a href="./SimplifyCreatePayment.php">Simplify Create Payment with Token</a></li>
-            <li><a href="./SimplifyCreatePaymentToken.phpp">Simplify Create Payment Token</a></li>
+            <li><a href="./SimplifyCreatePaymentToken.php">Simplify Create Payment Token</a></li>
         </ul>
     </body>
 </html>
