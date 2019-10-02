@@ -112,7 +112,7 @@ include '_bootstrap.php';
                 }
             }, simplifyResponseHandler);
             // Prevent the form from submitting
-            return false;
+            return true;
         });
     });
 </script>
