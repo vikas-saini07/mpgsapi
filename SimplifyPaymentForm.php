@@ -29,10 +29,10 @@ include '_bootstrap.php';
     <div>
         <label>Credit Card Number: </label>
         <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus />
-    </div>
+    </div><br>
     <div>
         <label>CVC: </label>
-        <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value=""/>
+        <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value=""/><br>
     </div>
     <div>
         <label>Expiry Date: </label>
@@ -62,7 +62,7 @@ include '_bootstrap.php';
             <option value="23">2023</option>
             <option value="24">2024</option>
         </select>
-    </div>
+    </div><br>
     <button id="process-payment-btn" type="submit">Process Payment</button>
 </form>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
