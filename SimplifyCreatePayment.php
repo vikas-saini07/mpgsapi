@@ -2,8 +2,8 @@
  
 require_once("./lib/Simplify.php");
 require_once("./SimplifyPaymentForm.php"); 
-Simplify::$publicKey = 'sbpb_NGUzNDA0MmUtYTdhOS00NDA1LWI3NTUtNTA0YzRiMmY1OTNl';
-Simplify::$privateKey = 'sQYcksCm3TgkBwIqlXu2MkHqImdK7mA7gl53aVjUmJ95YFFQL0ODSXAOkNtXTToq';
+Simplify::$publicKey = 'sbpb_NTFhMjA1YmMtMmQ3Ni00MTc3LTlhMDctODAwNDliYjA5NTU2';
+Simplify::$privateKey = 'cj3VP22g5FuI0+z8fSe2iBSqOdPgjbXHv6Hse8aVNfN5YFFQL0ODSXAOkNtXTToq';
  
 $payment = Simplify_Payment::createPayment(array(
         'amount' => '10000',
