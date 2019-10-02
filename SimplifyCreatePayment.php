@@ -1,7 +1,7 @@
 <?php
  
 require_once("./lib/Simplify.php");
- 
+require_once("./SimplifyPaymentForm.php"); 
 Simplify::$publicKey = 'sbpb_NGUzNDA0MmUtYTdhOS00NDA1LWI3NTUtNTA0YzRiMmY1OTNl';
 Simplify::$privateKey = 'sQYcksCm3TgkBwIqlXu2MkHqImdK7mA7gl53aVjUmJ95YFFQL0ODSXAOkNtXTToq';
  
