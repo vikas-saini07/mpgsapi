@@ -103,7 +103,7 @@ include '_bootstrap.php';
             $("#process-payment-btn").attr("disabled", "disabled");
             // Generate a card token & handle the response
             SimplifyCommerce.generateToken({
-                key: "sbpb_NGUzNDA0MmUtYTdhOS00NDA1LWI3NTUtNTA0YzRiMmY1OTNl",
+                key: "sbpb_NTFhMjA1YmMtMmQ3Ni00MTc3LTlhMDctODAwNDliYjA5NTU2",
                 card: {
                     number: $("#cc-number").val(),
                     cvc: $("#cc-cvc").val(),
