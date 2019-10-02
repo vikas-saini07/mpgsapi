@@ -45,6 +45,7 @@ include '_bootstrap.php';
             <li><a href="./HostedSessionTESTVICTOR01_53.html">Create/Update Session (Hosted Session)</a></li>
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
             <li><a href="./SimplifyPaymentForm.php">Simplify Payment Form</a></li>
+            <li><a href="./SimplifyCreatePayment.php">Simplify Create Payment with Token</a></li>
         </ul>
     </body>
 </html>
