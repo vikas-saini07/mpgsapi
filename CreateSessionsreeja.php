@@ -2,14 +2,14 @@
 include '_bootstrap.php';
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://test-gateway.mastercard.com/api/nvp/version/47",
+  CURLOPT_URL => "https://cibpaynow.gateway.mastercard.com/api/nvp/version/47",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 100,
   CURLOPT_TIMEOUT => 300,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=TESTSREEJATEST&apiUsername=merchant.TESTSREEJATEST&apiPassword=c4651e4827dd5232b285a9f53e70f549&order.currency=AUD&order.id=ABC123&order.amount=45",
+  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=TESTCIB700667&apiUsername=merchant.TESTCIB700667&apiPassword=C56a5c6970723c341cb0a36e702b95ee&order.currency=AUD&order.id=ABC123&order.amount=45",
   CURLOPT_HTTPHEADER => array(
     "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
     "Content-Type: application/x-www-form-urlencoded",
