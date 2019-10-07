@@ -9,7 +9,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 300,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=TESTCIB700667&apiUsername=merchant.TESTCIB700667&apiPassword=C56a5c6970723c341cb0a36e702b95ee&order.currency=EGP&order.id=ABC123&order.amount=45",
+  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=CIB700667&apiUsername=merchant.CIB700667&apiPassword=b243eb3ddf411b082d152d23eebfa354&order.currency=EGP&order.id=ABC123&order.amount=45",
   CURLOPT_HTTPHEADER => array(
     "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
     "Content-Type: application/x-www-form-urlencoded",
