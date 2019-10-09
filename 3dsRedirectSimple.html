@@ -4,19 +4,14 @@
 <head>
 <meta charset="UTF-8">
   <script type="module">
-var r = httpClient.get("https://victor-test-app123.herokuapp.com/3dsRedirectSimple.html");
-// set the pending request into a context variable
-context.setVariable('pendingResponse', r); 
-var r = context.getVariable('pendingResponse');
-if (r) { // retrieve the pending request from the context variable 
-    r.waitForComplete();
-    if (r.isSuccess()) {
-        print("Content Length => " , r.getResponse().headers['Content-Length']);
-        print("All headers == > ",  JSON.stringify(r.getResponse().headers) );
-      for (var j in r.getResponse().headers) { 
-        print( j, "==> ", r.getResponse().headers[j]);
-    }
-}
+let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+
+// get one header
+alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
+
+// iterate over all headers
+for (let [key, value] of response.headers) {
+  alert(`${key} = ${value}`);
 }
 
  </script>
