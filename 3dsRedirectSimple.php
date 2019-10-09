@@ -1,7 +1,7 @@
 <?php
 // create curl resource
 
-
+/*
 $ch = curl_init();
 
 // set url
@@ -40,11 +40,13 @@ foreach($data as $part){
 }
 
 // Print all headers as array
-/*echo "<pre>";
+echo "<pre>";
 print_r($headers);
 <?php var_dump($_POST); ?>
 echo "</pre>";
 */
+
+
 ?>
 
   
@@ -58,7 +60,9 @@ echo "</pre>";
 <body>
 <h1>My Test Result</h1>
 <pre>The header response value is:
-    <?php print_r($headers); ?></pre>
+    <?php foreach (getallheaders() as $name => $value) { 
+    echo "$name: $value <br>"; 
+}  ?></pre>
 </body>
 
 </html>
