@@ -17,6 +17,7 @@ curl_setopt($ch, CURLOPT_NOBODY, 0);
 $output = curl_exec($ch);
 header('Content-Type: application/x-www-form-urlencoded');
 header("Access-Control-Allow-Origin: *");
+header("Origin: https://na.gateway.mastercard.com");
 // close curl resource to free up system resources
 curl_close($ch);
 
