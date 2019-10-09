@@ -3,6 +3,12 @@
 
 <head>
 <meta charset="UTF-8">
+  <script type="module">
+var request = new XMLHttpRequest();
+request.open('GET', '/', /* async = */ false);
+request.send();
+console.log(request.getResponseHeader('content-type'));
+ </script>
 </head>
 
 <body>
