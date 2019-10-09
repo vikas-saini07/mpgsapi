@@ -12,7 +12,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 //enable headers
 curl_setopt($ch, CURLOPT_HEADER, 1);
 //get only headers
-curl_setopt($ch, CURLOPT_NOBODY, 1);
+curl_setopt($ch, CURLOPT_NOBODY, 0);
 // $output contains the output string
 $output = curl_exec($ch);
 
