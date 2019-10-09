@@ -15,7 +15,8 @@ curl_setopt($ch, CURLOPT_HEADER, 1);
 curl_setopt($ch, CURLOPT_NOBODY, 0);
 // $output contains the output string
 $output = curl_exec($ch);
-
+header('Content-Type: application/x-www-form-urlencoded');
+header("Access-Control-Allow-Origin: *");
 // close curl resource to free up system resources
 curl_close($ch);
 
