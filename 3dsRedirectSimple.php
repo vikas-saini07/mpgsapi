@@ -5,7 +5,7 @@
 $ch = curl_init();
 
 // set url
-curl_setopt($ch, CURLOPT_URL, "https://victor-test-app123.herokuapp.com/3dsRedirectSimple.php");
+curl_setopt($ch, CURLOPT_URL, "https://victor-test-app123.herokuapp.com");
 
 //return the transfer as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
