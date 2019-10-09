@@ -3,23 +3,39 @@
 
 <head>
 <meta charset="UTF-8">
-  <script type="module">
-let response = await fetch('https://victor-test-app123.herokuapp.com/3dsRedirectSimple.html');
+  <script refer type="text/javascript">
 
-// get one header
-alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
-
-// iterate over all headers
-for (let [key, value] of response.headers) {
-  alert(`${key} = ${value}`);
-}
+let promise = fetch('https://victor-test-app123.herokuapp.com/3dsRedirectSimple.html', {
+  method: "POST", // POST, PUT, DELETE, etc.
+  headers: {
+    // the content type header value is usually auto-set
+    // depending on the request body
+    "Content-Type": "text/plain;charset=UTF-8"
+  },
+  body: FormData // string, FormData, Blob, BufferSource, or URLSearchParams
+  referrer: "about:client", // or "" to send no Referer header,
+  // or an url from the current origin
+  referrerPolicy: "no-referrer-when-downgrade", // no-referrer, origin, same-origin...
+  mode: "cors", // same-origin, no-cors
+  credentials: "same-origin", // omit, include
+  cache: "default", // no-store, reload, no-cache, force-cache, or only-if-cached
+  redirect: "follow", // manual, error
+  integrity: "", // a hash, like "sha256-abcdef1234567890"
+  keepalive: false, // true
+  signal: undefined, // AbortController to abort request
+  window: window // null
+});
 
  </script>
 </head>
 
 <body>
 <h1>My Test Result</h1>
-<p>Please check here!</p>
+<p>The header response value is:<br>
+      <script type="text/javascript">
+        document.write(promise)!
+      </script>
+        </p>
 </body>
 
 </html>
