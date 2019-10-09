@@ -44,7 +44,7 @@ include '_bootstrap.php';
             <li><a href="./checkout__BAIDURI_N_950028548_mastercard.php">Pass Checkout Session with Hosted Checkout</a></li>
             <li><a href="./HostedSessionTESTVICTOR01_53.html">Create/Update Session (Hosted Session)</a></li>
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
-            <li><a href="./3dsRedirectSimple.html">3DS WSAPI Simple responseUrl</a></li>
+            <li><a href="./3dsRedirectSimple.php">3DS WSAPI Simple responseUrl</a></li>
         </ul>
     </body>
 </html>
