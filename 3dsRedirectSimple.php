@@ -63,7 +63,7 @@ echo "</pre>";
     <?php foreach (getallheaders() as $name => $value) { 
     echo "$name: $value <br>"; 
 }  ?></pre>
-    <br><p><script type="text/javascript">var data = formData.getAll('PaRes'); document.write(data);</script></p>
+    <br><p><?php var_dump($_POST); ?></p>
 </body>
 
 </html>
