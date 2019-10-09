@@ -15,9 +15,10 @@ curl_setopt($ch, CURLOPT_HEADER, 1);
 curl_setopt($ch, CURLOPT_NOBODY, 0);
 // $output contains the output string
 $output = curl_exec($ch);
-//header('Content-Type: application/x-www-form-urlencoded');
+header('Content-Type: application/x-www-form-urlencoded');
 //header("Access-Control-Allow-Origin: *");
 header("Origin: https://na.gateway.mastercard.com");
+header("Content-Disposition: form-data; name="PaRes"; 
 // close curl resource to free up system resources
 curl_close($ch);
 
@@ -41,6 +42,7 @@ foreach($data as $part){
 // Print all headers as array
 /*echo "<pre>";
 print_r($headers);
+<?php var_dump($_POST); ?>
 echo "</pre>";
 */
 ?>
