@@ -63,7 +63,8 @@ echo "</pre>";
     <?php foreach (getallheaders() as $name => $value) { 
     echo "$name: $value <br>"; 
 }  ?></pre>
-    <br><p><?php $pares = $_POST['PaRes']; echo $pares; 
+    <br><p><h2>The PaRes value returned is:</h2>
+    <?php $pares = $_POST['PaRes']; echo $pares; 
     //var_dump($pares);
     ?></p>
 </body>
