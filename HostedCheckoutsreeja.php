@@ -40,7 +40,7 @@ var n = x.toString();
     var sessionId = "SESSION0002759238078E97833401L7";
     var sessionVersion = "a13e7a0901";
     var successIndicator = "ad89d84ea5434900";
-    var orderId = "ABC123";
+    var orderId = "ABC12123";
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
@@ -79,7 +79,7 @@ cancelCallback = "http://www.bbc.com/";
             sessionId = data.sessionId;
             sessionVersion = data.sessionVersion;
             merchantId = data.merchantId;
-            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
+            window.location.href = "https://mpgsvikas.herokuapp.com/displayResult.php/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
         }
 //        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
 //        window.location.href = "/hostedCheckout/" + data.orderId + "/" + result;
@@ -92,10 +92,10 @@ function completeCallback(response) {
         var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
 		console.log(result); 
         //location.href = "https://www.google.com";
-		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
+		window.location.href = "https://mpgsvikas.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
-merchant:'TESTSREEJATEST',
+merchant:'TESTJUNAID201',
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
