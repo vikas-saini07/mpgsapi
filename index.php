@@ -45,6 +45,7 @@ include '_bootstrap.php';
             <li><a href="./HostedSessionTESTVICTOR01_53.html">Create/Update Session (Hosted Session)</a></li>
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
             <li><a href="./3dsRedirectSimple.php">3DS WSAPI Simple responseUrl</a></li>
+            <li><a href="./mpgs2020test.php">Vikas 2020 MPGS Hosted Checkout</a></li>
         </ul>
     </body>
 </html>
