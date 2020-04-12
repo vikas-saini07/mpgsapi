@@ -95,7 +95,7 @@ function completeCallback(response) {
 		window.location.href = "https://mpgsvikas.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
-merchant:'TESTJUNAID201',
+merchant:'TESTVIKAS',
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
